@@ -1,9 +1,18 @@
 import React from "react";
 import { connect } from "dva";
-// import styles from "./IndexPage.css";
+import styles from "./IndexPage.scss";
+import { Layout } from "antd";
+
+const { Header, Content } = Layout;
 
 function IndexPage() {
-  return <div>hello world</div>;
+  return (
+    <Layout className={styles.layout}>
+      <Header className={styles.header}>header</Header>
+
+      <Content className={styles.content}>content</Content>
+    </Layout>
+  );
 }
 
 IndexPage.propTypes = {};
